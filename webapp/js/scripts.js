@@ -11,7 +11,7 @@ function addAnswer(e) {
 		data : queryString,
 		dataType : 'json',
 		error: onError,
-		success : onSuccess,Í
+		success : onSuccess,
 	});
 }
 
