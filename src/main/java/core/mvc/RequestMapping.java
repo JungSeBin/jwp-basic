@@ -12,6 +12,7 @@ import next.controller.ListUserController;
 import next.controller.LoginController;
 import next.controller.LogoutController;
 import next.controller.ProfileController;
+import next.controller.QuestionController;
 import next.controller.UpdateFormUserController;
 import next.controller.UpdateUserController;
 
