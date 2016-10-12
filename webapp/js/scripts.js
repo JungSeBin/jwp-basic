@@ -9,9 +9,10 @@ function addAnswer(e) {
 		type : 'post',
 		url : '/api/qna/addAnswer',
 		data : queryString,
-		error : onError,
-		success : onSuccess,
-	})
+		dataType : 'json',
+		error: onError,
+		success : onSuccess,Í
+	});
 }
 
 String.prototype.format = function() {
@@ -26,8 +27,11 @@ String.prototype.format = function() {
 
 function onSuccess(json, status) {
 	var answerTemplate = $("#answerTemplate").html();
-	var template = answerTemplate.format(json.write, new Data(json.createdDate),
-			json.contents, json.answerId);
+	var template = answerTemplate.format(json.writer, new Date(json.createdDate),
+			json.contents, json.answerId, json.answerId);
 	$(".qna-comment-slipp-articles").prepend(template);
 }
 
+function onError(xhr, status) {
+	  alert("error");
+}
