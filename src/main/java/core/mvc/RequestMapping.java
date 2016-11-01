@@ -30,6 +30,7 @@ public class RequestMapping {
         mappings.put("/users/create", new CreateUserController());
         mappings.put("/users/updateForm", new UpdateFormUserController());
         mappings.put("/users/update", new UpdateUserController());
+        mappings.put("/qna/form.html",new ForwardController("/qna/form.html"));
 
         logger.info("Initialized Request Mapping!");
     }
